@@ -79,7 +79,7 @@ struct PartialCarbonRetirementCollectModuleInitData {
  * In this case, treasury fee and referralFee are calculated on the total amount that the recipient/publisher gets.
  *
  */
-contract V3PartialCarbonRetirementCollectModule is
+contract PartialCarbonRetirementCollectModule is
     CarbonRetireBase,
     FeeModuleBase,
     FollowValidationModuleBase,

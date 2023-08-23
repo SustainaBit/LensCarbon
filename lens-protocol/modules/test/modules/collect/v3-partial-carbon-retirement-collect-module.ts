@@ -26,7 +26,7 @@
  * testInitializeWithCorrectInitData
  * 
  * 
- * Specific for V3PartialCarbonRetirementCollectModule:
+ * Specific for PartialCarbonRetirementCollectModule:
  * ---------------------------------------------------
  * 
  * testCannotInitializeWithNonWhitelistedPoolToken
@@ -51,7 +51,7 @@
  * testCanCollectIfAllConditionsAreMet
  * testCurrentCollectsIncreaseProperlyWhenCollecting
  * 
- * Specific for V3PartialCarbonRetirementCollectModule:
+ * Specific for PartialCarbonRetirementCollectModule:
  * ---------------------------------------------------
  * 
  * testCannotProcessCollect_PassingWrongPoolTokenInData

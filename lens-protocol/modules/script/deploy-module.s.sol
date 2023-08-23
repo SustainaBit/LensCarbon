@@ -8,7 +8,7 @@ import {MultirecipientFeeCollectModule} from 'contracts/collect/MultirecipientFe
 import {AaveFeeCollectModule} from 'contracts/collect/AaveFeeCollectModule.sol';
 import {ERC4626FeeCollectModule} from 'contracts/collect/ERC4626FeeCollectModule.sol';
 import {PartialCarbonRetirementCollectModule} from 'contracts/collect/PartialCarbonRetirementCollectModule.sol';
-import {V3PartialCarbonRetirementCollectModule} from 'contracts/collect/V3PartialCarbonRetirementCollectModule.sol';
+import {PartialCarbonRetirementCollectModule} from 'contracts/collect/PartialCarbonRetirementCollectModule.sol';
 import {TokenGatedReferenceModule} from 'contracts/reference/TokenGatedReferenceModule.sol';
 import {ForkManagement} from 'script/helpers/ForkManagement.sol';
 
@@ -162,19 +162,19 @@ contract DeployPartialCarbonRetirementCollectModule is DeployBase {
     }
 }
 
-contract DeployV3PartialCarbonRetirementCollectModule is DeployBase {
+contract DeployPartialCarbonRetirementCollectModule is DeployBase {
     using stdJson for string;
 
     address retirementHelper = 0x8cE54d9625371fb2a068986d32C85De8E6e995f8; // Klima KlimaInfinity/RetirementAggregatorV2 mainnet
     function deploy() internal override returns (address) {
-        console.log('\nContract: V3PartialCarbonRetirementCollectModule');
+        console.log('\nContract: PartialCarbonRetirementCollectModule');
         console.log('Init params:');
         console.log('\tLensHubProxy:', lensHubProxy);
         console.log('\tModuleGlobals:', moduleGlobals);
         console.log('\tRetirementHelper:', retirementHelper);
 
         vm.startBroadcast(deployerPrivateKey);
-        V3PartialCarbonRetirementCollectModule module = new V3PartialCarbonRetirementCollectModule(
+        PartialCarbonRetirementCollectModule module = new PartialCarbonRetirementCollectModule(
             lensHubProxy,
             moduleGlobals,
             retirementHelper
