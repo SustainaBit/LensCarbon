@@ -77,3 +77,26 @@ Lens collect carbon retirements
 
 - Set collection rule: choose "carbon percentage" instead of everything
 - Collection workflow: make visible that collection will retire carbon
+
+# Local deployment
+
+## Deploy Lens protocol on local fork
+
+- open 2 terminals
+- in each, navigate to lens-protocol/core
+- in the first, enter:
+  ```bash
+  npm install 
+  npm run compile
+  npx hardhat node
+  ```
+- in the second, enter:
+  ```bash
+  npm run full-deploy-local
+  ```
+
+That's similar to https://docs.lens.xyz/docs/deploying-the-protocol
+
+## Deploying Lenster
+
+

@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.10;
 
-import 'forge-std/Script.sol';
-import 'forge-std/StdJson.sol';
-import {StepwiseCollectModule} from 'contracts/collect/StepwiseCollectModule.sol';
-import {MultirecipientFeeCollectModule} from 'contracts/collect/MultirecipientFeeCollectModule.sol';
-import {AaveFeeCollectModule} from 'contracts/collect/AaveFeeCollectModule.sol';
-import {ERC4626FeeCollectModule} from 'contracts/collect/ERC4626FeeCollectModule.sol';
-import {PartialCarbonRetirementCollectModule} from 'contracts/collect/PartialCarbonRetirementCollectModule.sol';
-import {PartialCarbonRetirementCollectModule} from 'contracts/collect/PartialCarbonRetirementCollectModule.sol';
-import {TokenGatedReferenceModule} from 'contracts/reference/TokenGatedReferenceModule.sol';
-import {ForkManagement} from 'script/helpers/ForkManagement.sol';
+import '../lib/forge-std/src/Script.sol';
+import '../lib/forge-std/src/StdJson.sol';
+import {StepwiseCollectModule} from '../contracts/collect/StepwiseCollectModule.sol';
+import {MultirecipientFeeCollectModule} from '../contracts/collect/MultirecipientFeeCollectModule.sol';
+import {AaveFeeCollectModule} from '../contracts/collect/AaveFeeCollectModule.sol';
+import {ERC4626FeeCollectModule} from '../contracts/collect/ERC4626FeeCollectModule.sol';
+import {PartialCarbonRetirementCollectModule} from '../contracts/collect/PartialCarbonRetirementCollectModule.sol';
+import {PartialCarbonRetirementCollectModule} from '../contracts/collect/PartialCarbonRetirementCollectModule.sol';
+import {TokenGatedReferenceModule} from '../contracts/reference/TokenGatedReferenceModule.sol';
+import {ForkManagement} from '../script/helpers/ForkManagement.sol';
 
 contract DeployBase is Script, ForkManagement {
     using stdJson for string;

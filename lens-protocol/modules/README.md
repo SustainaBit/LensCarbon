@@ -27,7 +27,7 @@ especially regarding the lib/ folder
 2. Copy the given API key into the BLOCK_EXPLORER_KEY variable in .env
 
 
-### Continuing original Readme
+### Continueing original Readme
 
 1. `npm install`
 2. If you also want to use Foundry - follow the Foundry installation instructions [here](https://getfoundry.sh/).
