@@ -97,6 +97,6 @@ Lens collect carbon retirements
 
 That's similar to https://docs.lens.xyz/docs/deploying-the-protocol
 
-## Deploying Lenster
+## Deploying App
 
 
