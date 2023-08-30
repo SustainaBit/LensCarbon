@@ -1,0 +1,30 @@
+{
+  "name": "@workers/oembed",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0",
+  "scripts": {
+    "dev": "wrangler dev --port 8087",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
+    "prettier": "prettier --check \"**/*.{js,ts,tsx,md}\"  --cache",
+    "prettier:fix": "prettier --write \"**/*.{js,ts,tsx,md}\"  --cache",
+    "start": "pnpm dev",
+    "test:dev": "vitest --run",
+    "typecheck": "tsc --pretty",
+    "worker:deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@cfworker/base64url": "^1.12.5",
+    "@lenster/lib": "workspace:*",
+    "itty-router": "^4.0.22",
+    "linkedom": "^0.15.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230821.0",
+    "@lenster/config": "workspace:*",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.2",
+    "wrangler": "^3.5.1"
+  }
+}
