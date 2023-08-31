@@ -86,23 +86,25 @@ const CarbonConfig: FC<CarbonConfigProps> = ({
       {collectModule.carbonRetirement?.split ? (
         <div className="pt-4">
           <div className="flex space-x-2 text-sm">
-            <Input
-              label={t`Percent`}
-              type="range"
-              placeholder="10"
-              min="0"
-              max="100"
-              value={parseFloat(collectModule.carbonRetirement.split)}
-              onChange={(event) => {
-                setCollectType({
-                  carbonRetirement: {
-                    pooltoken: collectModule.carbonRetirement?.poolToken,
-                    split: event.target.value ? event.target.value : '0'
-                  }
-                })
-              }}
-            />
-            <div>{parseFloat(collectModule.carbonRetirement.split)}%</div>
+            <div className="flex items-center space-x-2 w-7/12">
+              <Input
+                label={t`Percent`}
+                type="range"
+                placeholder="10"
+                min="0"
+                max="100"
+                value={parseFloat(collectModule.carbonRetirement.split)}
+                onChange={(event) => {
+                  setCollectType({
+                    carbonRetirement: {
+                      pooltoken: collectModule.carbonRetirement?.poolToken,
+                      split: event.target.value ? event.target.value : '0'
+                    }
+                  })
+                }}
+              />
+              <div>{parseFloat(collectModule.carbonRetirement.split)}%</div>
+            </div>  
             <div>
               <div className="label">
                 <Trans>Carbon token</Trans>
