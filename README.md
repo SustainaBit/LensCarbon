@@ -78,25 +78,19 @@ Lens collect carbon retirements
 - Set collection rule: choose "carbon percentage" instead of everything
 - Collection workflow: make visible that collection will retire carbon
 
-# Local deployment
+# Repository structure
+
+The repo consists of different more or less dependent folders. Each one contains an own readme.
+
+- **hardhat**:
+- **lens-app**: A separate frontend from the hackathon
+- **lens-protocol**: Local copy of github/lens-protocol, contains all functionality of lens protocol and our smart contracts
+- **lenster-main**: Local copy of github/lenster, frontend of Lenster with our modifications
+- **utils**: Folder with helper stuff
+
+# Deployments
+## Lenster app local deployment
+See readme in lenster-main
 
 ## Deploy Lens protocol on local fork
-
-- open 2 terminals
-- in each, navigate to lens-protocol/core
-- in the first, enter:
-  ```bash
-  npm install 
-  npm run compile
-  npx hardhat node
-  ```
-- in the second, enter:
-  ```bash
-  npm run full-deploy-local
-  ```
-
-That's similar to https://docs.lens.xyz/docs/deploying-the-protocol
-
-## Deploying App
-
-
+See readme in lens-protocol
