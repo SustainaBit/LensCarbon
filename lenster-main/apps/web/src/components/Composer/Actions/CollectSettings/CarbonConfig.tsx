@@ -86,9 +86,10 @@ const CarbonConfig: FC<CarbonConfigProps> = ({
       {collectModule.carbonRetirement?.split ? (
         <div className="pt-4">
           <div className="flex space-x-2 text-sm">
-            <div className="flex items-center space-x-2 w-7/12">
+            <div className="flex items-end space-x-2 w-7/12">
               <Input
                 label={t`Percent`}
+                className='h-10 accent-green-600 focus:ring-0 focus:ring-offset-0'
                 type="range"
                 placeholder="10"
                 min="0"
@@ -103,8 +104,9 @@ const CarbonConfig: FC<CarbonConfigProps> = ({
                   })
                 }}
               />
-              <div>{parseFloat(collectModule.carbonRetirement.split)}%</div>
+              
             </div>  
+            <div className='w-12 text-center mt-8'>{parseFloat(collectModule.carbonRetirement.split)}%</div>
             <div>
               <div className="label">
                 <Trans>Carbon token</Trans>

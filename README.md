@@ -89,8 +89,8 @@ The repo consists of different more or less dependent folders. Each one contains
 - **utils**: Folder with helper stuff
 
 # Deployments
-## Lenster app local deployment
+## Lenster app local deployment (Frontend)
 See readme in lenster-main
 
-## Deploy Lens protocol on local fork
+## Deploy Lens protocol on local fork (Smart Contracts)
 See readme in lens-protocol
