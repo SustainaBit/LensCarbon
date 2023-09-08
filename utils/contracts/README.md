@@ -1,0 +1,1 @@
+Mock contracts that are used for LensCarbon demonstrator on testnet. Reason is, KlimaDAO retirement aggregator seems not to be deployed on testnet. But mock contracts should be fine for demonstration purposes.

@@ -48,15 +48,22 @@ Tagline: **Lens collect partial carbon retirements**
 
 ## Implementation
 
-### Partial carbon retirement collect module (PCRCM)
-- use KlimaDAO's retirement aggregator (RA) for maximum flexibility https://github.com/KlimaDAO/klimadao-solidity/tree/main/src/infinity
-- RA performs the token swap from collect currency to carbon token and the token retirement
-- allow any collect currency that is whitelisted by Lens and any carbon token that is included in the RA
-- at module init, check if swap path & liquidity exists. If not, revert.
-- at collect process, check if swap path & liquidity exists. If not:
-  - process collect without retirement (do not revert)
-  - send retirement amount to publisher, deduct treasury fee, but send an event on blockchain to signal to publisher that they should perform retirement manually to cover all such failed retirements.
-- include retirement messages to make it possible to search for all retirements by a Lens profile, publication
+- Set collection rule: choose "carbon percentage" instead of everything
+- Collection workflow: make visible that collection will retire carbon
 
-### Frontend
-- follow Lenster
+# Repository structure
+
+The repo consists of different more or less dependent folders. Each one contains an own readme.
+
+- **hardhat**:
+- **lens-app**: A separate frontend from the hackathon
+- **lens-protocol**: Local copy of github/lens-protocol, contains all functionality of lens protocol and our smart contracts
+- **lenster-main**: Local copy of github/lenster, frontend of Lenster with our modifications
+- **utils**: Folder with helper stuff
+
+# Deployments
+## Lenster app local deployment (Frontend)
+See readme in lenster-main
+
+## Deploy Lens protocol on local fork (Smart Contracts)
+See readme in lens-protocol
